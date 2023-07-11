@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    background-color: rgb(240, 155, 155);
+    animation-name: square;
+    animation-duration: 4s;
+    animation-timing-function:steps() ;
+    animation-delay: 2s;
+    animation-iteration-count:initial;
+    animation-direction:inherit;
+    animation-fill-mode:backwards;
+    animation-play-state: running;
+}
+
+@keyframes square{
+    0%{background-color: rgb(250, 2, 2);
+    left: 10px;
+    top: 10px;
+    border-radius: 2px;
+    }
+    25%{background-color: rgb(2, 250, 14);
+    left: 150px;
+    top: 10px;
+    border-radius: 10%;
+    }
+    50%{background-color: rgb(2, 233, 250);
+    left: 150px;
+    top: 150px;
+    border-radius: 20%;
+    } 
+    75%{background-color: rgb(56, 2, 250);
+    left: 10px;
+    top: 150px;
+    border-radius: 40%;
+    }
+    100%{background-color: rgb(229, 2, 250);
+        left: 10px;
+        top: 10px;
+        border-radius: 50%;
+    }
+}

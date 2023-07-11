@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin-left: 40%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 50%;
+    border: 10px solid blue;
+    position: relative;
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes circle{
+    0%{border-color: red;transform: scale(1);}
+    0%{border-color: rgb(255, 196, 0);transform: scale(1.1);}
+    0%{border-color: rgb(0, 255, 115);transform: scale(1)}
+    0%{border-color: rgb(234, 0, 255);transform: scale(1.1)}
+}
+
+#myElemnet{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    margin-top: 100px;
+    margin-left: 100px;
+    transition-duration: 1000ms;
+    transition-property: transform;
+    /* animation-name: square;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1); */
+    /* animation-fill-mode: initial; */
+}
+/*  
+@keyframes square {
+    0%{transform: rotate(10deg);
+    transform: scale(2);}
+    20%{transform: rotate(10deg);
+        transform: scale(3);}
+    40%{transform: rotate(20deg);
+        transform: scale(4);}
+    60%{transform: rotate(30deg);
+        transform: scale(5);}
+    80%{transform: rotate(40deg);
+        transform: scale(6);}
+    100%{transform: rotate(50deg);
+        transform: scale(7);}
+} */
+
+#myElemnet:hover{
+    transform:  rotate(360deg) 
+    /* transform: rotate(-30deg);
+    transform: skew(20deg); */
+    /* transform:matrix(2,0,0,2,250,200) rotate(-30deg); */
+}
