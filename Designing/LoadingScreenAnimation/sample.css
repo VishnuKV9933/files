@@ -5,29 +5,46 @@
     
 }
 .circle{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     display: flex;
     margin-left: 40%;
     margin-top: 50px;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    
     border-radius: 50%;
     border: 10px solid blue;
     position: relative;
     animation-name: circle;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-fill-mode:both;
-    animation-timing-function: ease-in-out;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in;
 }
+
+#square{
+width: 75px;
+height: 75px;
+border: 10px solid blue;
+animation: square 2s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes square{
+    0%{ transform: rotate(0deg);}
+    25%{border-color: aqua; border-width: 10px;}
+    50%{border-color: rgb(0, 60, 255); border-width: 20px;}
+    75%{border-color: rgb(162, 0, 255); border-width: 40px;}
+    100%{transform: rotate(360deg); border-width: 5px;}
+}
+
 
 @keyframes circle{
     0%{border-color: red;transform: scale(1);}
-    0%{border-color: rgb(255, 196, 0);transform: scale(1.1);}
-    0%{border-color: rgb(0, 255, 115);transform: scale(1)}
-    0%{border-color: rgb(234, 0, 255);transform: scale(1.1)}
+    25%{border-color: rgb(255, 196, 0);transform: scale(1.1);}
+    50%{border-color: rgb(0, 255, 115);transform: scale(1.2)}
+    75%{border-color: rgb(234, 0, 255);transform: scale(1.1)}
+    100%{border-color: rgb(234, 0, 255);transform: scale(1)}
 }
 
 #myElemnet{
